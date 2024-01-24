@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { AddCategory, GifGrid } from "./components";
+import PropTypes from "prop-types"
 
 export const GifExpertApp = () => {
 
-    const [ categories, setCategories ] = useState(['One Punch']);
+    const [ categories, setCategories ] = useState(['Dragon ball']);
 
     const onAddCategory = ( newCategory ) => {
         if ( categories.includes(newCategory) ) return;
@@ -31,3 +32,8 @@ export const GifExpertApp = () => {
     </>
   )
 }
+
+
+GifExpertApp.propTypes = {
+    onNewCategory : PropTypes.func.isRequired,
+  }

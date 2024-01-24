@@ -23,3 +23,4 @@ export const useFetchGifs = ( category ) => {
         isLoading
     }
 }
+
